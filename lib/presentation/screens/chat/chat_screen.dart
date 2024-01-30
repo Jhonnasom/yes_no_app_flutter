@@ -20,7 +20,7 @@ class ChatScreen extends StatelessWidget {
                 'https://www.nuevamujer.com/resizer/eFpRksKyWS2PkhNWXmEWpK10Mfw=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/ICTLGP3X7RC2TO4MFELOVI47JI.jpg'),
           ),
         ),
-        title: const Text('Mi amor <3'),
+        title: const Text('Key <3'),
         centerTitle: false,
       ),
       body: _ChatView(),
@@ -46,7 +46,7 @@ class _ChatView extends StatelessWidget {
                 final message = chatProvider.messageList[index];
 
                 return (message.fromWho == FromWho.you)
-                    ? const HerMessageBubble()
+                    ? HerMessageBubble(message: message)
                     : MyMessageBubble(message: message);
               },
             )),
